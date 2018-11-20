@@ -1,0 +1,7 @@
+Index_XBXXZ	Name_XBXXZ	Number_XBXXZ	Rmb_XBXXZ	Gold_XBXXZ	IOS_XBXXZ	Android_XBXXZ	Appid1_XBXXZ	ID1_XBXXZ	Appid2_XBXXZ	ID2_XBXXZ	Appid3_XBXXZ	ID3_XBXXZ	Appid4_XBXXZ	ID4_XBXXZ	Appid5_XBXXZ	ID5_XBXXZ	Appid6_XBXXZ	ID6_XBXXZ	Appid7_XBXXZ	ID7_XBXXZ	Appid8_XBXXZ	ID8_XBXXZ	Appid9_XBXXZ	ID9_XBXXZ	Appid10_XBXXZ	ID10_XBXXZ	Appid11_XBXXZ	ID11_XBXXZ	Appid12_XBXXZ	ID12_XBXXZ	Appid13_XBXXZ	ID13_XBXXZ	Appid14_XBXXZ	ID14_XBXXZ	Appid15_XBXXZ	ID15_XBXXZ	Appid16_XBXXZ	ID16_XBXXZ	Appid17_XBXXZ	ID17_XBXXZ	Appid18_XBXXZ	ID18_XBXXZ	Appid19_XBXXZ	ID19_XBXXZ	Appid20_XBXXZ	ID20_XBXXZ	Appid21_XBXXZ	ID21_XBXXZ	Appid22_XBXXZ	ID22_XBXXZ	Appid23_XBXXZ	ID23_XBXXZ	Appid24_XBXXZ	ID24_XBXXZ	Appid25_XBXXZ	ID25_XBXXZ	Appid26_XBXXZ	ID26_XBXXZ	Appid27_XBXXZ	ID27_XBXXZ	Appid28_XBXXZ	ID28_XBXXZ	Appid29_XBXXZ	ID29_XBXXZ	Appid30_XBXXZ	ID30_XBXXZ
+1	6上品灵石	6	6	6	1	1	1256263914	com.tryit.world.handofcoins																																																										
+2	18上品灵石	18	18	18	1	1	1256263914	com.tryit.world.pileofcoins																																																										
+3	68上品灵石	68	68	68	1	1	1256263914	com.tryit.world.bagofcoins																																																										
+4	168上品灵石	168	168	168	1	1	1256263914	com.tryit.world.sackofcoins																																																										
+5	328上品灵石	328	328	328	1	1	1256263914	com.tryit.world.boxofcoins																																																										
+6	648上品灵石	648	648	648	1	1	1256263914	com.tryit.world.chestofcoins																																																										

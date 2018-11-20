@@ -1,0 +1,22 @@
+quality_XBXXZ	name_XBXXZ	formation_XBXXZ	minexp_XBXXZ	maxexp_XBXXZ	levelexp_XBXXZ	percent_XBXXZ	paper1_XBXXZ	paperpercent1_XBXXZ	paper2_XBXXZ	paperpercent2_XBXXZ	paper3_XBXXZ	paperpercent3_XBXXZ	paper4_XBXXZ	paperpercent4_XBXXZ	paper5_XBXXZ	paperpercent5_XBXXZ	paper6_XBXXZ	paperpercent6_XBXXZ	paper7_XBXXZ	paperpercent7_XBXXZ	paper8_XBXXZ	paperpercent8_XBXXZ	paper9_XBXXZ	paperpercent9_XBXXZ	paper10_XBXXZ	paperpercent10_XBXXZ	paper11_XBXXZ	paperpercent11_XBXXZ	paper12_XBXXZ	paperpercent12_XBXXZ	paper13_XBXXZ	paperpercent13_XBXXZ	paper14_XBXXZ	paperpercent14_XBXXZ	paper15_XBXXZ	paperpercent15_XBXXZ
+1	阵法学徒	太元剑阵	1	2	64	1																														
+2	一品阵法师	北斗七星阵	2	3	256	1000																														
+3	二品阵法师	八门金锁阵	3	4	480	500																														
+4	三品阵法师	小周天阵	4	5	1152	200																														
+5	四品阵法师	太阴奇门阵	5	6	2688	100																														
+6	五品阵法师	大周天阵	6	7	4608	50																														
+7	六品阵法师	大须弥九宫阵	7	8	9776	20																														
+8	七品阵法师	天魔玄阴大阵	8	9	22960	10																														
+9	八品阵法师	诛仙剑阵	9	10	51384	5																														
+10	九品阵法师	十绝阵	10	11	94992	2																														
+11	一品仙阵师	迷仙阵	11	15	142488	2																														
+12	二品仙阵师	六戊戮仙大阵	12	16	213732	2																														
+13	三品仙阵师	混元芥子仙阵	13	17	320598	2																														
+14	四品仙阵师	诸天欲魔锁魂阵	14	18	480897	2																														
+15	五品仙阵师	天魔摄魂大阵	15	19	721346	2																														
+16	六品仙阵师	九幽转轮大藏阵	16	20	1082018	2																														
+17	七品仙阵师	大须弥正反九宫仙阵	17	21	1623027	2																														
+18	八品仙阵师	都天烈火仙阵	18	22	2434541	2																														
+19	九品仙阵师	九子母天魔玄阴大阵	19	23	3651812	2																														
+20	阵皇	毁天灭地阵	20	24	5477717	2																														
+21	阵圣	盘古大阵	21	25	8216576	2																														

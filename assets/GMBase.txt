@@ -1,0 +1,32 @@
+ID_XBXXZ	Name_XBXXZ	Content_XBXXZ
+//ID,名字,参数个数，格式
+1000	无敌	//god
+1001	加声望	//test act=addreputation num=10000
+1002	添加征服度	//test act=addking mapid=1026
+1003	通关地图	//test act=passmap mapid=1025
+1004	西方极乐	//test act=worldprocess index=1 num=100
+1005	装备本命法宝	//test act=addfabao id=1
+1006	法宝添加经验	//test act=fabaoexp id=1 exp=1111
+1006	添加宠物	//test act=addpet id=1
+1007	获取道具	//duang id= num=
+1008	添加时间	//test act=addyear num=3000
+1009	添加魔气	//test act=addmagicexp num=100000
+2	加经验	//showmetheexp num=
+3	加灵石	//test act=addstone num=1000
+4	进帮	//test act=createschool id=22
+5	获取邮件	//testmail act=send
+6	设置炼丹师等级	//test act=setdanquality id=2
+7	升级	//shengji num=10
+8	加元宝	//showmetheyuanbao num=1000
+9	帮派加贡献	//test act=addcontribute num=10000
+10	设置地图	//test act=settodayentertimes mapid=1001 num=100
+11	设置炼器师等级	//test act=setqiquality id=2
+12	重置商城	//test act=resetshop
+13	充值	//showmethechongz num=10000
+14	加灵气	//test act=addspirit num=1000
+15	开启功能	//open type=1
+16	出售包裹	//SellAll
+17	招募1仆役	//GetServant
+18	招募仆役	//test act=addperson num=100
+19	增加道童指令	//test act=adddaotong id=42
+

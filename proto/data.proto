@@ -1,0 +1,311 @@
+syntax = "proto3";
+package xbxxz;
+
+message t_EnterMapMessage_XBXXZ {
+    uint32 mapid_xxz = 1;
+}
+
+message t_LoginSelectMessage_XBXXZ {
+    uint32 isReconected_xxz = 1; // Default 0
+}
+
+message t_stGetRandNameMessage_XBXXZ {
+    uint32 sex_xxz = 1;
+}
+
+message stServerReturnLoginFailedCmd {
+    uint32 returncode = 1;
+}
+
+message t_SpiritNumMessage_XBXXZ {
+    uint32 addspirit_xxz = 1;
+    uint32 curspirit_xxz = 2;
+}
+
+message t_AddExpMessage_XBXXZ {
+    uint32 addexp_xxz = 1;
+    uint32 userexp_xxz = 2;
+}
+
+message t_MainPackNumProto {
+    uint32 mainpacknum_xxz = 1;
+    uint32 storepacknum = 2;
+}
+
+message t_CaveValue5SecMessage_XBXXZ {
+    int32 stoneadd_xxz = 1;
+    int32 foodadd_xxz = 2;
+    int32 woodadd_xxz = 3;
+    int32 drugadd_xxz = 4;
+    int32 ironadd_xxz = 5;
+    uint32 stone_xxz = 6;
+    uint32 food_xxz = 7;
+    uint32 wood_xxz = 8;
+    uint32 drug_xxz = 9;
+    uint32 iron_xxz = 10;
+}
+
+
+message t_MapUserSculptProto {
+    uint32 dwHorseID = 1;
+    uint32 dwHeadID = 2;
+    uint32 dwBodyID = 3;
+    uint32 dwlegsID = 4;
+    uint32 dwhandsID = 5;
+    uint32 dwfeetsID = 6;
+    uint32 dwWeaponID = 7;
+}
+
+message SelectUserInfo {
+    uint32 id = 1;
+    string name = 2;
+    uint32 type = 3;
+    uint32 level = 4;
+    uint32 mapid = 5;
+    string mapName = 6;
+    uint32 country = 7;
+    uint32 group = 8;
+    uint32 face = 9;
+    uint32 hair = 10;
+    string countryName = 11;
+    uint32 bitmask = 12;
+    uint32 forbidTime = 13;
+    uint32 zone_state = 14;
+    uint32 target_zone = 15;
+    uint32 acceptPK = 16;
+    t_MapUserSculptProto sculpt = 17;
+    uint32 flatZoneID = 18;
+    uint32 gameZoneID = 19;
+    uint32 activestar = 20;
+}
+
+message stObjectLocationProto {
+    uint32 dwLocation_xxz = 1;
+    uint32 x_xxz = 2;
+}
+
+message t_ObjectProto {
+    uint32 qwThisID_xxz = 1;
+    uint32 dwObjectID_xxz = 2;
+    string strName_xxz = 3;
+    uint32 dwNum_xxz = 4;
+    stObjectLocationProto pos_xxz = 5;
+    uint32 bind_xxz = 6;
+    uint32 overDue_xxz = 7;
+    uint32 basedamage_xxz = 8;
+    uint32 defence_xxz = 9;
+    uint32 wdamage_xxz = 10;
+    uint32 mdamage_xxz = 11;
+    uint32 gdamage_xxz = 12;
+    uint32 pdamage_xxz = 13;
+    uint32 dodge_xxz = 14;
+    uint32 bang_xxz = 15;
+    uint32 aspeed_xxz = 16;
+    uint32 doom_xxz = 17;
+    uint32 maxhp_xxz = 18;
+}
+
+message t_AddObjectInfoProto {
+    uint32 byActionType_xxz = 1;
+    t_ObjectProto obj_xxz = 2;
+}
+
+message t_stAddObjectListUnityMessage_XBXXZProto {
+    uint32 version_xxz = 1;
+    repeated t_AddObjectInfoProto userset_xxz = 2;
+}
+
+message t_stUserInfoMessage_XBXXZProto {
+    uint32 version = 1;
+    repeated SelectUserInfo userset = 2;
+}
+message PetPKActionProto {
+    string petname_xxz = 1;
+    uint32 hurt_xxz = 2;
+    uint32 hurtype_xxz = 3;
+}
+
+message PKActionProto {
+    uint32 type_xxz = 1;
+    uint32 hurt_xxz = 2;
+    uint32 hurtype_xxz = 3;
+    uint32 attskilltype_xxz = 4;
+    uint32 attskillvalue_xxz = 5;
+    uint32 defskilltype_xxz = 6;
+    uint32 defskillvalue_xxz = 7;
+    PetPKActionProto petaction_xxz = 8;
+}
+
+message t_RewardObjsProto {
+    uint32 id_xxz = 1;
+    uint32 num_xxz = 2;
+}
+
+message t_NpcAttResultMessage_XBXXZ {
+    uint32 result_xxz = 1;
+    repeated PKActionProto actions_xxz = 2;
+    uint32 reputation_xxz = 3;
+    repeated t_RewardObjsProto items_xxz = 4;
+}
+
+message t_MoveMapMessage_XBXXZ {
+    uint32 pos_xxz = 1;
+}
+
+message t_MapListMessage_XBXXZ {
+    repeated uint32 mapids_xxz = 1;
+    uint32 curmapid_xxz = 2;
+}
+
+message t_EventInfoProto {
+    uint32 pos_xxz = 1;
+    uint32 type_xxz = 2; // Default is 2,
+    uint32 action_xxz = 3;
+    uint32 value1_xxz = 4; // npcID
+    uint32 value2_xxz = 5; // count
+    uint32 npcatt_xxz = 6;
+}
+
+message t_OneMapInfoMessage_XBXXZ {
+    uint32 curpos_xxz = 1;
+    repeated t_EventInfoProto events_xxz = 2;
+    uint32 lastpos_xxz = 3;
+}
+
+message t_MapEnterInfoMessage_XBXXZ {
+    uint32 totalentertimes_xxz = 1;
+    uint32 maxautotimes_xxz = 2;
+    uint32 autothreesecbuy_xxz = 3;
+    uint32 autoonesecbuy_xxz = 4;
+    uint32 autosellobj_xxz = 5;
+    uint32 maxturntimes_xxz = 6;
+}
+
+message t_MainUserProto {
+    uint32 charid_xxz = 1;
+    string name_xxz = 2;
+    uint32 sex_xxz = 3;
+    uint32 level_xxz = 4;
+    uint64 exp_xxz = 5;
+    uint64 nextexp_xxz = 6;
+    uint32 group_xxz = 7;
+    uint32 spiritstone_xxz = 8;
+    uint32 reputation_xxz = 9;
+    uint32 bodylevel_xxz = 10;
+    uint32 doomlevel_xxz = 11;
+    uint32 livetime_xxz = 12;
+    uint32 pkscore_xxz = 13;
+    uint32 doompercent_xxz = 14;
+    uint32 spiritnum_xxz = 15;
+    uint32 maxspiritnum_xxz = 16;
+    uint32 spiritlevel_xxz = 17;
+    uint32 goldspiritlevel_xxz = 18;
+    uint32 woodspiritlevel_xxz = 19;
+    uint32 waterspiritlevel_xxz = 20;
+    uint32 firespiritlevel_xxz = 21;
+    uint32 mudspiritlevel_xxz = 22;
+    uint32 food_xxz = 23;
+    uint32 wood_xxz = 24;
+    uint32 drug_xxz = 25;
+    uint32 iron_xxz = 26;
+    uint32 skillpoint32_xxz = 27;
+    uint32 positive_xxz = 28;
+    uint32 negative_xxz = 29;
+    uint32 neutral_xxz = 30;
+    uint32 buyskillpoint32_xxz = 31;
+    uint32 gold_xxz = 32;
+    uint32 gongde_xxz = 33;
+    uint32 needskillcontribute_xxz = 34;
+    uint32 fairylandmapid_xxz = 35;
+    uint32 officerlevel_xxz = 36;
+    uint32 userface_xxz = 37;
+    uint32 walkspeed_xxz = 38;
+    uint32 flyspeed_xxz = 39;
+    uint32 swimspeed_xxz = 40;
+    uint32 totalrecharge_xxz = 41;
+}
+
+message t_UserItemMessage_XBXXZ {
+    uint32 qwthisid_xxz = 1;
+    uint32 num_xxz = 2;
+}
+
+message t_SellObjMessage_XBXXZ {
+    uint32 objthisid_xxz = 1;
+    uint32 num_xxz = 2;
+}
+
+message t_RefreshObjMessage_XBXXZ {
+    uint32 qwthisid_xxz = 1;
+    uint32 num_xxz = 2;
+    uint32 type_xxz = 3;
+}
+
+message t_DelObjMessage_XBXXZ {
+    uint32 qwthisid_xxz = 1;
+}
+
+message t_BuyObjMessage_XBXXZ {
+    uint32 index_xxz = 1;
+    uint32 itemid_xxz = 2;
+    uint32 itemnum_xxz = 3;
+}
+
+message t_ReqOpenShopMessage_XBXXZ {
+    uint32 index_xxz = 1;
+}
+
+message t_ShopItemProto {
+    uint32 itemid_xxz = 1;
+    uint32 maxbuynum_xxz = 2;
+    uint32 curbuynum_xxz = 3;
+    uint32 price_xxz = 4;
+}
+
+message t_ShopInfoMessage_XBXXZ {
+    repeated t_ShopItemProto shops_xxz = 1;
+    uint32 refreshtime_xxz = 2;
+    uint32 index_xxz = 3;
+}
+
+message t_UpLinGenMessage_XBXXZ {
+    uint32 type_xxz = 1;
+}
+
+message t_stMobileChannelChatMessage_XBXXZProto {
+    uint32 dwType_xxz = 1;
+    uint32 dwSysInfoType_xxz = 2;
+    uint32 dwCharType_xxz = 3;
+    uint32 dwCountry_xxz = 4;
+    uint32 dwVip_xxz = 5;
+    uint32 dwFromUserTempID_xxz = 6;
+    uint32 dwChatTime_xxz = 7;
+    string pstrName_xxz = 8;
+    string pstrChat_xxz = 9;
+}
+
+message t_SchoolSkillProto {
+    uint32 skillid_xxz = 1;
+    uint32 skilllevel_xxz = 2;
+    uint32 type_xxz = 3;
+}
+
+message t_SchoolInfoMessage_XBXXZ {
+    uint32 schoolid_xxz = 1;
+    repeated t_SchoolSkillProto skills_xxz = 2;
+}
+
+message t_UpSkillMessage_XBXXZ {
+    uint32 skillid_xxz = 1;
+}
+
+message t_ReturnUpSkillMessage_XBXXZ {
+    uint32 skillid_xxz = 1;
+    uint32 skilllevel_xxz = 2;
+    uint32 type_xxz = 3;
+}
+
+message t_ReqAutoMapMessage_XBXXZ {
+    uint32 mapid_xxz = 1;
+    uint32 count_xxz = 2;
+}

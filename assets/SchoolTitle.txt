@@ -1,0 +1,8 @@
+Level_XBXXZ	Name_XBXXZ	NeedContribute_XBXXZ	ItemID_XBXXZ	ItemNum_XBXXZ
+1	外门弟子	100	67	1
+2	内门弟子	500	67	2
+3	执法弟子	2000	67	3
+4	真传弟子	5000	67	4
+5	长老	10000	67	5
+6	护法	50000	67	6
+7	供奉	100000	67	7

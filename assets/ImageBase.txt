@@ -1,0 +1,9 @@
+ID_XBXXZ	Path_XBXXZ
+1	UI/Icons/tubiao1.png
+2	UI/Icons/tubiao2.png
+3	UI/Icons/tubiao3.png
+4	UI/Icons/tubiao4.png
+5	UI/Icons/tubiao5.png
+6	UI/Icons/tubiao6.png
+7	UI/Icons/tubiao7.png
+8	UI/Icons/tubiao8.png

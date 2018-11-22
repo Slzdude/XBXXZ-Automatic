@@ -19,6 +19,8 @@ class MapSystem:
         self.map.init_map(data)
         self.map_info = True
         self.wait = False
+        if self.is_enemy():
+            self.attack()
 
     def move(self):
         next_step = self.map.get_step()

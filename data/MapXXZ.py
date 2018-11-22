@@ -24,7 +24,7 @@ class MapXXZ:
         print(self.cur_pos)
         self.step_index = 0
         self.last_pos = map_data['lastposXxz']
-        self.init_step()
+
         # open('map5', 'w').write(json.dumps(map_data))
 
     @staticmethod
@@ -34,14 +34,14 @@ class MapXXZ:
                 return len(ls) - i - 1
         return -1
 
-    def init_step(self):
+    def get_step(self):
         cur_pos = self.cur_pos
         if cur_pos not in self.steps:
-            return
-        self.step_index = self.rindex(self.steps, self.cur_pos) + 1
+            self.step_index = 0
+        if not self.step_index:
+            self.step_index = self.rindex(self.steps, self.cur_pos)
 
-    def get_step(self):
-        self.init_step()
+        self.step_index += 1
         step = self.steps[self.step_index]
         self.cur_pos = step
         return step
@@ -323,6 +323,6 @@ map2001_xxz = MapXXZ(2001, [
     198, 218, 219, 220, 200
 ])
 if __name__ == '__main__':
-    data = json.loads(open('../map/2001.json').read())
-    map2001_xxz.init_map(data)
-    map2001_xxz.interactive()
+    data = json.loads(open('../data/1007.json').read())
+    map7_xxz.init_map(data)
+    map7_xxz.show_steps()

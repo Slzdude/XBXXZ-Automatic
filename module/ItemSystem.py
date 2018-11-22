@@ -25,7 +25,7 @@ class ItemSystem:
         if item_type in [11, 12, 13]:
             self.sell_item(obj)
 
-        if obj.dwObjectID_xxz in [1, 2, 3, 4]:
+        if obj.dwObjectID_xxz in [1, 2, 3, 4, 5] or 18 < obj.dwObjectID_xxz < 28:
             self.sell_item(obj)
         elif item_type in [5] or obj.dwObjectID_xxz in [38]:
             self.use_item(obj)

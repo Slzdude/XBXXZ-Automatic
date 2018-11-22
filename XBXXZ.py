@@ -12,7 +12,7 @@ from module import NetworkSystem, MapSystem, ItemSystem, UserSystem, SchoolSyste
 from xbxxz import *
 
 net_sys = NetworkSystem()
-map_sys = MapSystem(net_sys, MapXXZ(2001))
+map_sys = MapSystem(net_sys, map5_xxz)
 item_sys = ItemSystem(net_sys)
 user_sys = UserSystem(net_sys)
 school_sys = SchoolSystem(net_sys)
@@ -31,15 +31,11 @@ def travel():
     print('Battle Begin')
     last = user_sys.user.spiritstone_xxz
     while True:
-        if net_sys.enter_info.maxturntimes_xxz == 0:
-            print('Waiting for enter time msg.')
-            time.sleep(3)
-            continue
-        if net_sys.enter_info.totalentertimes_xxz > net_sys.enter_info.maxturntimes_xxz:
+        if net_sys.enter_info.maxturntimes_xxz and net_sys.enter_info.totalentertimes_xxz > net_sys.enter_info.maxturntimes_xxz:
             print('暂停过图')
             break
         if not map_sys.map_info:
-            if net_sys.enter_info.totalentertimes_xxz <= net_sys.enter_info.maxturntimes_xxz / 2:
+            if net_sys.enter_info.maxturntimes_xxz and net_sys.enter_info.totalentertimes_xxz <= net_sys.enter_info.maxturntimes_xxz / 2:
                 map_sys.map = map7_xxz
             else:
                 map_sys.map = map5_xxz
@@ -87,6 +83,18 @@ def travel():
 @net_sys.bind([XBXXZ_BACK_MESSAGE.XBXXZ_BACK_NONE, XBXXZ_BACK_MESSAGE.XBXXZ_BACK_FUNCTION_OTHERDRAGONLOG])
 def none(data):
     pass
+
+
+@net_sys.bind(XBXXZ_BACK_MESSAGE.XBXXZ_BACK_FUNCTION_MAPLIST)
+def map_list(data):
+    tmp = t_MapListMessage_XBXXZ.FromString(data)
+    print(tmp.curmapid_xxz)
+    if tmp.curmapid_xxz == 1005:
+        map_sys.map = map5_xxz
+    elif tmp.curmapid_xxz == 1007:
+        map_sys.map = map7_xxz
+    else:
+        print('Unknown MAP')
 
 
 @net_sys.bind(XBXXZ_BACK_MESSAGE.XBXXZ_BACK_CHAT)

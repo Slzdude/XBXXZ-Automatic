@@ -52,31 +52,31 @@ class NetworkSystem:
         self.send(tmp.Serialize())
 
     def read(self):
-        try:
-            if self.mHeader == 0 and len(self.mMessage) == 4:
-                self.mHeader = struct.unpack('<i', self.mMessage)[0]
-                self.mTargetLength = self.mHeader
-                self.mMessage = b''
+        if self.mHeader == 0 and len(self.mMessage) == 4:
+            self.mHeader = struct.unpack('<i', self.mMessage)[0]
+            self.mTargetLength = self.mHeader
+            self.mMessage = b''
+        else:
+            if len(self.mMessage) < self.mTargetLength:
+                data = self.client.recv(1)
+                self.mMessage += data
             else:
-                if len(self.mMessage) < self.mTargetLength:
-                    data = self.client.recv(1)
-                    self.mMessage += data
-                else:
-                    self.mHeader = 0
-                    self.mTargetLength = 4
-                    self.mMessageQueue.put(self.mMessage)
-                    self.mMessage = b''
-        except Exception as e:
-            print(e)
+                self.mHeader = 0
+                self.mTargetLength = 4
+                self.mMessageQueue.put(self.mMessage)
+                self.mMessage = b''
 
     def recv(self):
         time.sleep(5)
         while True:
-            if self.client._closed:
+            if not self.client or self.client._closed:
                 print('Waitting For Connection...')
-                time.sleep(2)
+                time.sleep(0.5)
                 continue
-            self.read()
+            try:
+                self.read()
+            except Exception as e:
+                print(self.client)
 
     def bind(self, msg_id):
         def decorator(f):
@@ -173,7 +173,9 @@ class NetworkSystem:
 
     def login_game(self, server):
         if not self.client._closed:
-            self.client.close()
+            client = self.client
+            self.client = None
+            client.close()
         # self.RecreateNetReader_XBXXZ()
         self.client = socket.socket()
         self.client.connect((server.domain, server.port))

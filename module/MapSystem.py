@@ -27,11 +27,13 @@ class MapSystem:
         print('Move to:', next_step)
         self.move_to(next_step)
         if self.map.is_enemy():
+            time.sleep(2)
             self.attack()
             i = 0
             while self.wait and i < 20:
                 time.sleep(0.5)
                 i += 1
+            self.wait = False
         if self.map.is_exit():
             # print('EXIT_MAP')
             self.exit()

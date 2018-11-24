@@ -309,3 +309,7 @@ message t_ReqAutoMapMessage_XBXXZ {
     uint32 mapid_xxz = 1;
     uint32 count_xxz = 2;
 }
+
+message t_ReqFiveSecMessage_XBXXZ {
+    uint32 type_xxz = 1;
+}

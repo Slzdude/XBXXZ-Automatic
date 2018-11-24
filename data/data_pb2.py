@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -19,8 +18,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     syntax='proto3',
     serialized_options=None,
     serialized_pb=_b(
-        '\n\ndata.proto\x12\x05xbxxz\",\n\x17t_EnterMapMessage_XBXXZ\x12\x11\n\tmapid_xxz\x18\x01 \x01(\r\"6\n\x1at_LoginSelectMessage_XBXXZ\x12\x18\n\x10isReconected_xxz\x18\x01 \x01(\r\"/\n\x1ct_stGetRandNameMessage_XBXXZ\x12\x0f\n\x07sex_xxz\x18\x01 \x01(\r\"2\n\x1cstServerReturnLoginFailedCmd\x12\x12\n\nreturncode\x18\x01 \x01(\r\"H\n\x18t_SpiritNumMessage_XBXXZ\x12\x15\n\raddspirit_xxz\x18\x01 \x01(\r\x12\x15\n\rcurspirit_xxz\x18\x02 \x01(\r\"@\n\x15t_AddExpMessage_XBXXZ\x12\x12\n\naddexp_xxz\x18\x01 \x01(\r\x12\x13\n\x0buserexp_xxz\x18\x02 \x01(\r\"C\n\x12t_MainPackNumProto\x12\x17\n\x0fmainpacknum_xxz\x18\x01 \x01(\r\x12\x14\n\x0cstorepacknum\x18\x02 \x01(\r\"\xe3\x01\n\x1ct_CaveValue5SecMessage_XBXXZ\x12\x14\n\x0cstoneadd_xxz\x18\x01 \x01(\x05\x12\x13\n\x0b\x66oodadd_xxz\x18\x02 \x01(\x05\x12\x13\n\x0bwoodadd_xxz\x18\x03 \x01(\x05\x12\x13\n\x0b\x64rugadd_xxz\x18\x04 \x01(\x05\x12\x13\n\x0bironadd_xxz\x18\x05 \x01(\x05\x12\x11\n\tstone_xxz\x18\x06 \x01(\r\x12\x10\n\x08\x66ood_xxz\x18\x07 \x01(\r\x12\x10\n\x08wood_xxz\x18\x08 \x01(\r\x12\x10\n\x08\x64rug_xxz\x18\t \x01(\r\x12\x10\n\x08iron_xxz\x18\n \x01(\r\"\x99\x01\n\x14t_MapUserSculptProto\x12\x11\n\tdwHorseID\x18\x01 \x01(\r\x12\x10\n\x08\x64wHeadID\x18\x02 \x01(\r\x12\x10\n\x08\x64wBodyID\x18\x03 \x01(\r\x12\x10\n\x08\x64wlegsID\x18\x04 \x01(\r\x12\x11\n\tdwhandsID\x18\x05 \x01(\r\x12\x11\n\tdwfeetsID\x18\x06 \x01(\r\x12\x12\n\ndwWeaponID\x18\x07 \x01(\r\"\x81\x03\n\x0eSelectUserInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\r\n\x05level\x18\x04 \x01(\r\x12\r\n\x05mapid\x18\x05 \x01(\r\x12\x0f\n\x07mapName\x18\x06 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x07 \x01(\r\x12\r\n\x05group\x18\x08 \x01(\r\x12\x0c\n\x04\x66\x61\x63\x65\x18\t \x01(\r\x12\x0c\n\x04hair\x18\n \x01(\r\x12\x13\n\x0b\x63ountryName\x18\x0b \x01(\t\x12\x0f\n\x07\x62itmask\x18\x0c \x01(\r\x12\x12\n\nforbidTime\x18\r \x01(\r\x12\x12\n\nzone_state\x18\x0e \x01(\r\x12\x13\n\x0btarget_zone\x18\x0f \x01(\r\x12\x10\n\x08\x61\x63\x63\x65ptPK\x18\x10 \x01(\r\x12+\n\x06sculpt\x18\x11 \x01(\x0b\x32\x1b.xbxxz.t_MapUserSculptProto\x12\x12\n\nflatZoneID\x18\x12 \x01(\r\x12\x12\n\ngameZoneID\x18\x13 \x01(\r\x12\x12\n\nactivestar\x18\x14 \x01(\r\">\n\x15stObjectLocationProto\x12\x16\n\x0e\x64wLocation_xxz\x18\x01 \x01(\r\x12\r\n\x05x_xxz\x18\x02 \x01(\r\"\x9a\x03\n\rt_ObjectProto\x12\x14\n\x0cqwThisID_xxz\x18\x01 \x01(\r\x12\x16\n\x0e\x64wObjectID_xxz\x18\x02 \x01(\r\x12\x13\n\x0bstrName_xxz\x18\x03 \x01(\t\x12\x11\n\tdwNum_xxz\x18\x04 \x01(\r\x12-\n\x07pos_xxz\x18\x05 \x01(\x0b\x32\x1c.xbxxz.stObjectLocationProto\x12\x10\n\x08\x62ind_xxz\x18\x06 \x01(\r\x12\x13\n\x0boverDue_xxz\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x61sedamage_xxz\x18\x08 \x01(\r\x12\x13\n\x0b\x64\x65\x66\x65nce_xxz\x18\t \x01(\r\x12\x13\n\x0bwdamage_xxz\x18\n \x01(\r\x12\x13\n\x0bmdamage_xxz\x18\x0b \x01(\r\x12\x13\n\x0bgdamage_xxz\x18\x0c \x01(\r\x12\x13\n\x0bpdamage_xxz\x18\r \x01(\r\x12\x11\n\tdodge_xxz\x18\x0e \x01(\r\x12\x10\n\x08\x62\x61ng_xxz\x18\x0f \x01(\r\x12\x12\n\naspeed_xxz\x18\x10 \x01(\r\x12\x10\n\x08\x64oom_xxz\x18\x11 \x01(\r\x12\x11\n\tmaxhp_xxz\x18\x12 \x01(\r\"W\n\x14t_AddObjectInfoProto\x12\x18\n\x10\x62yActionType_xxz\x18\x01 \x01(\r\x12%\n\x07obj_xxz\x18\x02 \x01(\x0b\x32\x14.xbxxz.t_ObjectProto\"q\n(t_stAddObjectListUnityMessage_XBXXZProto\x12\x13\n\x0bversion_xxz\x18\x01 \x01(\r\x12\x30\n\x0buserset_xxz\x18\x02 \x03(\x0b\x32\x1b.xbxxz.t_AddObjectInfoProto\"Y\n\x1et_stUserInfoMessage_XBXXZProto\x12\x0f\n\x07version\x18\x01 \x01(\r\x12&\n\x07userset\x18\x02 \x03(\x0b\x32\x15.xbxxz.SelectUserInfo\"N\n\x10PetPKActionProto\x12\x13\n\x0bpetname_xxz\x18\x01 \x01(\t\x12\x10\n\x08hurt_xxz\x18\x02 \x01(\r\x12\x13\n\x0bhurtype_xxz\x18\x03 \x01(\r\"\xe2\x01\n\rPKActionProto\x12\x10\n\x08type_xxz\x18\x01 \x01(\r\x12\x10\n\x08hurt_xxz\x18\x02 \x01(\r\x12\x13\n\x0bhurtype_xxz\x18\x03 \x01(\r\x12\x18\n\x10\x61ttskilltype_xxz\x18\x04 \x01(\r\x12\x19\n\x11\x61ttskillvalue_xxz\x18\x05 \x01(\r\x12\x18\n\x10\x64\x65\x66skilltype_xxz\x18\x06 \x01(\r\x12\x19\n\x11\x64\x65\x66skillvalue_xxz\x18\x07 \x01(\r\x12.\n\rpetaction_xxz\x18\x08 \x01(\x0b\x32\x17.xbxxz.PetPKActionProto\"4\n\x11t_RewardObjsProto\x12\x0e\n\x06id_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"\xa1\x01\n\x1bt_NpcAttResultMessage_XBXXZ\x12\x12\n\nresult_xxz\x18\x01 \x01(\r\x12)\n\x0b\x61\x63tions_xxz\x18\x02 \x03(\x0b\x32\x14.xbxxz.PKActionProto\x12\x16\n\x0ereputation_xxz\x18\x03 \x01(\r\x12+\n\titems_xxz\x18\x04 \x03(\x0b\x32\x18.xbxxz.t_RewardObjsProto\")\n\x16t_MoveMapMessage_XBXXZ\x12\x0f\n\x07pos_xxz\x18\x01 \x01(\r\"B\n\x16t_MapListMessage_XBXXZ\x12\x12\n\nmapids_xxz\x18\x01 \x03(\r\x12\x14\n\x0c\x63urmapid_xxz\x18\x02 \x01(\r\"\x85\x01\n\x10t_EventInfoProto\x12\x0f\n\x07pos_xxz\x18\x01 \x01(\r\x12\x10\n\x08type_xxz\x18\x02 \x01(\r\x12\x12\n\naction_xxz\x18\x03 \x01(\r\x12\x12\n\nvalue1_xxz\x18\x04 \x01(\r\x12\x12\n\nvalue2_xxz\x18\x05 \x01(\r\x12\x12\n\nnpcatt_xxz\x18\x06 \x01(\r\"q\n\x19t_OneMapInfoMessage_XBXXZ\x12\x12\n\ncurpos_xxz\x18\x01 \x01(\r\x12+\n\nevents_xxz\x18\x02 \x03(\x0b\x32\x17.xbxxz.t_EventInfoProto\x12\x13\n\x0blastpos_xxz\x18\x03 \x01(\r\"\xbf\x01\n\x1bt_MapEnterInfoMessage_XBXXZ\x12\x1b\n\x13totalentertimes_xxz\x18\x01 \x01(\r\x12\x18\n\x10maxautotimes_xxz\x18\x02 \x01(\r\x12\x1b\n\x13\x61utothreesecbuy_xxz\x18\x03 \x01(\r\x12\x19\n\x11\x61utoonesecbuy_xxz\x18\x04 \x01(\r\x12\x17\n\x0f\x61utosellobj_xxz\x18\x05 \x01(\r\x12\x18\n\x10maxturntimes_xxz\x18\x06 \x01(\r\"\xc4\x07\n\x0ft_MainUserProto\x12\x12\n\ncharid_xxz\x18\x01 \x01(\r\x12\x10\n\x08name_xxz\x18\x02 \x01(\t\x12\x0f\n\x07sex_xxz\x18\x03 \x01(\r\x12\x11\n\tlevel_xxz\x18\x04 \x01(\r\x12\x0f\n\x07\x65xp_xxz\x18\x05 \x01(\x04\x12\x13\n\x0bnextexp_xxz\x18\x06 \x01(\x04\x12\x11\n\tgroup_xxz\x18\x07 \x01(\r\x12\x17\n\x0fspiritstone_xxz\x18\x08 \x01(\r\x12\x16\n\x0ereputation_xxz\x18\t \x01(\r\x12\x15\n\rbodylevel_xxz\x18\n \x01(\r\x12\x15\n\rdoomlevel_xxz\x18\x0b \x01(\r\x12\x14\n\x0clivetime_xxz\x18\x0c \x01(\r\x12\x13\n\x0bpkscore_xxz\x18\r \x01(\r\x12\x17\n\x0f\x64oompercent_xxz\x18\x0e \x01(\r\x12\x15\n\rspiritnum_xxz\x18\x0f \x01(\r\x12\x18\n\x10maxspiritnum_xxz\x18\x10 \x01(\r\x12\x17\n\x0fspiritlevel_xxz\x18\x11 \x01(\r\x12\x1b\n\x13goldspiritlevel_xxz\x18\x12 \x01(\r\x12\x1b\n\x13woodspiritlevel_xxz\x18\x13 \x01(\r\x12\x1c\n\x14waterspiritlevel_xxz\x18\x14 \x01(\r\x12\x1b\n\x13\x66irespiritlevel_xxz\x18\x15 \x01(\r\x12\x1a\n\x12mudspiritlevel_xxz\x18\x16 \x01(\r\x12\x10\n\x08\x66ood_xxz\x18\x17 \x01(\r\x12\x10\n\x08wood_xxz\x18\x18 \x01(\r\x12\x10\n\x08\x64rug_xxz\x18\x19 \x01(\r\x12\x10\n\x08iron_xxz\x18\x1a \x01(\r\x12\x18\n\x10skillpoint32_xxz\x18\x1b \x01(\r\x12\x14\n\x0cpositive_xxz\x18\x1c \x01(\r\x12\x14\n\x0cnegative_xxz\x18\x1d \x01(\r\x12\x13\n\x0bneutral_xxz\x18\x1e \x01(\r\x12\x1b\n\x13\x62uyskillpoint32_xxz\x18\x1f \x01(\r\x12\x10\n\x08gold_xxz\x18  \x01(\r\x12\x12\n\ngongde_xxz\x18! \x01(\r\x12\x1f\n\x17needskillcontribute_xxz\x18\" \x01(\r\x12\x1a\n\x12\x66\x61irylandmapid_xxz\x18# \x01(\r\x12\x18\n\x10officerlevel_xxz\x18$ \x01(\r\x12\x14\n\x0cuserface_xxz\x18% \x01(\r\x12\x15\n\rwalkspeed_xxz\x18& \x01(\r\x12\x14\n\x0c\x66lyspeed_xxz\x18\' \x01(\r\x12\x15\n\rswimspeed_xxz\x18( \x01(\r\x12\x19\n\x11totalrecharge_xxz\x18) \x01(\r\"@\n\x17t_UserItemMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"@\n\x16t_SellObjMessage_XBXXZ\x12\x15\n\robjthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"T\n\x19t_RefreshObjMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"-\n\x15t_DelObjMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\"S\n\x15t_BuyObjMessage_XBXXZ\x12\x11\n\tindex_xxz\x18\x01 \x01(\r\x12\x12\n\nitemid_xxz\x18\x02 \x01(\r\x12\x13\n\x0bitemnum_xxz\x18\x03 \x01(\r\"/\n\x1at_ReqOpenShopMessage_XBXXZ\x12\x11\n\tindex_xxz\x18\x01 \x01(\r\"f\n\x0ft_ShopItemProto\x12\x12\n\nitemid_xxz\x18\x01 \x01(\r\x12\x15\n\rmaxbuynum_xxz\x18\x02 \x01(\r\x12\x15\n\rcurbuynum_xxz\x18\x03 \x01(\r\x12\x11\n\tprice_xxz\x18\x04 \x01(\r\"p\n\x17t_ShopInfoMessage_XBXXZ\x12)\n\tshops_xxz\x18\x01 \x03(\x0b\x32\x16.xbxxz.t_ShopItemProto\x12\x17\n\x0frefreshtime_xxz\x18\x02 \x01(\r\x12\x11\n\tindex_xxz\x18\x03 \x01(\r\"+\n\x17t_UpLinGenMessage_XBXXZ\x12\x10\n\x08type_xxz\x18\x01 \x01(\r\"\xfc\x01\n\'t_stMobileChannelChatMessage_XBXXZProto\x12\x12\n\ndwType_xxz\x18\x01 \x01(\r\x12\x19\n\x11\x64wSysInfoType_xxz\x18\x02 \x01(\r\x12\x16\n\x0e\x64wCharType_xxz\x18\x03 \x01(\r\x12\x15\n\rdwCountry_xxz\x18\x04 \x01(\r\x12\x11\n\tdwVip_xxz\x18\x05 \x01(\r\x12\x1c\n\x14\x64wFromUserTempID_xxz\x18\x06 \x01(\r\x12\x16\n\x0e\x64wChatTime_xxz\x18\x07 \x01(\r\x12\x14\n\x0cpstrName_xxz\x18\x08 \x01(\t\x12\x14\n\x0cpstrChat_xxz\x18\t \x01(\t\"S\n\x12t_SchoolSkillProto\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\x12\x16\n\x0eskilllevel_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"`\n\x19t_SchoolInfoMessage_XBXXZ\x12\x14\n\x0cschoolid_xxz\x18\x01 \x01(\r\x12-\n\nskills_xxz\x18\x02 \x03(\x0b\x32\x19.xbxxz.t_SchoolSkillProto\"-\n\x16t_UpSkillMessage_XBXXZ\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\"]\n\x1ct_ReturnUpSkillMessage_XBXXZ\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\x12\x16\n\x0eskilllevel_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"A\n\x19t_ReqAutoMapMessage_XBXXZ\x12\x11\n\tmapid_xxz\x18\x01 \x01(\r\x12\x11\n\tcount_xxz\x18\x02 \x01(\rb\x06proto3')
+        '\n\ndata.proto\x12\x05xbxxz\",\n\x17t_EnterMapMessage_XBXXZ\x12\x11\n\tmapid_xxz\x18\x01 \x01(\r\"6\n\x1at_LoginSelectMessage_XBXXZ\x12\x18\n\x10isReconected_xxz\x18\x01 \x01(\r\"/\n\x1ct_stGetRandNameMessage_XBXXZ\x12\x0f\n\x07sex_xxz\x18\x01 \x01(\r\"2\n\x1cstServerReturnLoginFailedCmd\x12\x12\n\nreturncode\x18\x01 \x01(\r\"H\n\x18t_SpiritNumMessage_XBXXZ\x12\x15\n\raddspirit_xxz\x18\x01 \x01(\r\x12\x15\n\rcurspirit_xxz\x18\x02 \x01(\r\"@\n\x15t_AddExpMessage_XBXXZ\x12\x12\n\naddexp_xxz\x18\x01 \x01(\r\x12\x13\n\x0buserexp_xxz\x18\x02 \x01(\r\"C\n\x12t_MainPackNumProto\x12\x17\n\x0fmainpacknum_xxz\x18\x01 \x01(\r\x12\x14\n\x0cstorepacknum\x18\x02 \x01(\r\"\xe3\x01\n\x1ct_CaveValue5SecMessage_XBXXZ\x12\x14\n\x0cstoneadd_xxz\x18\x01 \x01(\x05\x12\x13\n\x0b\x66oodadd_xxz\x18\x02 \x01(\x05\x12\x13\n\x0bwoodadd_xxz\x18\x03 \x01(\x05\x12\x13\n\x0b\x64rugadd_xxz\x18\x04 \x01(\x05\x12\x13\n\x0bironadd_xxz\x18\x05 \x01(\x05\x12\x11\n\tstone_xxz\x18\x06 \x01(\r\x12\x10\n\x08\x66ood_xxz\x18\x07 \x01(\r\x12\x10\n\x08wood_xxz\x18\x08 \x01(\r\x12\x10\n\x08\x64rug_xxz\x18\t \x01(\r\x12\x10\n\x08iron_xxz\x18\n \x01(\r\"\x99\x01\n\x14t_MapUserSculptProto\x12\x11\n\tdwHorseID\x18\x01 \x01(\r\x12\x10\n\x08\x64wHeadID\x18\x02 \x01(\r\x12\x10\n\x08\x64wBodyID\x18\x03 \x01(\r\x12\x10\n\x08\x64wlegsID\x18\x04 \x01(\r\x12\x11\n\tdwhandsID\x18\x05 \x01(\r\x12\x11\n\tdwfeetsID\x18\x06 \x01(\r\x12\x12\n\ndwWeaponID\x18\x07 \x01(\r\"\x81\x03\n\x0eSelectUserInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\r\n\x05level\x18\x04 \x01(\r\x12\r\n\x05mapid\x18\x05 \x01(\r\x12\x0f\n\x07mapName\x18\x06 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x07 \x01(\r\x12\r\n\x05group\x18\x08 \x01(\r\x12\x0c\n\x04\x66\x61\x63\x65\x18\t \x01(\r\x12\x0c\n\x04hair\x18\n \x01(\r\x12\x13\n\x0b\x63ountryName\x18\x0b \x01(\t\x12\x0f\n\x07\x62itmask\x18\x0c \x01(\r\x12\x12\n\nforbidTime\x18\r \x01(\r\x12\x12\n\nzone_state\x18\x0e \x01(\r\x12\x13\n\x0btarget_zone\x18\x0f \x01(\r\x12\x10\n\x08\x61\x63\x63\x65ptPK\x18\x10 \x01(\r\x12+\n\x06sculpt\x18\x11 \x01(\x0b\x32\x1b.xbxxz.t_MapUserSculptProto\x12\x12\n\nflatZoneID\x18\x12 \x01(\r\x12\x12\n\ngameZoneID\x18\x13 \x01(\r\x12\x12\n\nactivestar\x18\x14 \x01(\r\">\n\x15stObjectLocationProto\x12\x16\n\x0e\x64wLocation_xxz\x18\x01 \x01(\r\x12\r\n\x05x_xxz\x18\x02 \x01(\r\"\x9a\x03\n\rt_ObjectProto\x12\x14\n\x0cqwThisID_xxz\x18\x01 \x01(\r\x12\x16\n\x0e\x64wObjectID_xxz\x18\x02 \x01(\r\x12\x13\n\x0bstrName_xxz\x18\x03 \x01(\t\x12\x11\n\tdwNum_xxz\x18\x04 \x01(\r\x12-\n\x07pos_xxz\x18\x05 \x01(\x0b\x32\x1c.xbxxz.stObjectLocationProto\x12\x10\n\x08\x62ind_xxz\x18\x06 \x01(\r\x12\x13\n\x0boverDue_xxz\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x61sedamage_xxz\x18\x08 \x01(\r\x12\x13\n\x0b\x64\x65\x66\x65nce_xxz\x18\t \x01(\r\x12\x13\n\x0bwdamage_xxz\x18\n \x01(\r\x12\x13\n\x0bmdamage_xxz\x18\x0b \x01(\r\x12\x13\n\x0bgdamage_xxz\x18\x0c \x01(\r\x12\x13\n\x0bpdamage_xxz\x18\r \x01(\r\x12\x11\n\tdodge_xxz\x18\x0e \x01(\r\x12\x10\n\x08\x62\x61ng_xxz\x18\x0f \x01(\r\x12\x12\n\naspeed_xxz\x18\x10 \x01(\r\x12\x10\n\x08\x64oom_xxz\x18\x11 \x01(\r\x12\x11\n\tmaxhp_xxz\x18\x12 \x01(\r\"W\n\x14t_AddObjectInfoProto\x12\x18\n\x10\x62yActionType_xxz\x18\x01 \x01(\r\x12%\n\x07obj_xxz\x18\x02 \x01(\x0b\x32\x14.xbxxz.t_ObjectProto\"q\n(t_stAddObjectListUnityMessage_XBXXZProto\x12\x13\n\x0bversion_xxz\x18\x01 \x01(\r\x12\x30\n\x0buserset_xxz\x18\x02 \x03(\x0b\x32\x1b.xbxxz.t_AddObjectInfoProto\"Y\n\x1et_stUserInfoMessage_XBXXZProto\x12\x0f\n\x07version\x18\x01 \x01(\r\x12&\n\x07userset\x18\x02 \x03(\x0b\x32\x15.xbxxz.SelectUserInfo\"N\n\x10PetPKActionProto\x12\x13\n\x0bpetname_xxz\x18\x01 \x01(\t\x12\x10\n\x08hurt_xxz\x18\x02 \x01(\r\x12\x13\n\x0bhurtype_xxz\x18\x03 \x01(\r\"\xe2\x01\n\rPKActionProto\x12\x10\n\x08type_xxz\x18\x01 \x01(\r\x12\x10\n\x08hurt_xxz\x18\x02 \x01(\r\x12\x13\n\x0bhurtype_xxz\x18\x03 \x01(\r\x12\x18\n\x10\x61ttskilltype_xxz\x18\x04 \x01(\r\x12\x19\n\x11\x61ttskillvalue_xxz\x18\x05 \x01(\r\x12\x18\n\x10\x64\x65\x66skilltype_xxz\x18\x06 \x01(\r\x12\x19\n\x11\x64\x65\x66skillvalue_xxz\x18\x07 \x01(\r\x12.\n\rpetaction_xxz\x18\x08 \x01(\x0b\x32\x17.xbxxz.PetPKActionProto\"4\n\x11t_RewardObjsProto\x12\x0e\n\x06id_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"\xa1\x01\n\x1bt_NpcAttResultMessage_XBXXZ\x12\x12\n\nresult_xxz\x18\x01 \x01(\r\x12)\n\x0b\x61\x63tions_xxz\x18\x02 \x03(\x0b\x32\x14.xbxxz.PKActionProto\x12\x16\n\x0ereputation_xxz\x18\x03 \x01(\r\x12+\n\titems_xxz\x18\x04 \x03(\x0b\x32\x18.xbxxz.t_RewardObjsProto\")\n\x16t_MoveMapMessage_XBXXZ\x12\x0f\n\x07pos_xxz\x18\x01 \x01(\r\"B\n\x16t_MapListMessage_XBXXZ\x12\x12\n\nmapids_xxz\x18\x01 \x03(\r\x12\x14\n\x0c\x63urmapid_xxz\x18\x02 \x01(\r\"\x85\x01\n\x10t_EventInfoProto\x12\x0f\n\x07pos_xxz\x18\x01 \x01(\r\x12\x10\n\x08type_xxz\x18\x02 \x01(\r\x12\x12\n\naction_xxz\x18\x03 \x01(\r\x12\x12\n\nvalue1_xxz\x18\x04 \x01(\r\x12\x12\n\nvalue2_xxz\x18\x05 \x01(\r\x12\x12\n\nnpcatt_xxz\x18\x06 \x01(\r\"q\n\x19t_OneMapInfoMessage_XBXXZ\x12\x12\n\ncurpos_xxz\x18\x01 \x01(\r\x12+\n\nevents_xxz\x18\x02 \x03(\x0b\x32\x17.xbxxz.t_EventInfoProto\x12\x13\n\x0blastpos_xxz\x18\x03 \x01(\r\"\xbf\x01\n\x1bt_MapEnterInfoMessage_XBXXZ\x12\x1b\n\x13totalentertimes_xxz\x18\x01 \x01(\r\x12\x18\n\x10maxautotimes_xxz\x18\x02 \x01(\r\x12\x1b\n\x13\x61utothreesecbuy_xxz\x18\x03 \x01(\r\x12\x19\n\x11\x61utoonesecbuy_xxz\x18\x04 \x01(\r\x12\x17\n\x0f\x61utosellobj_xxz\x18\x05 \x01(\r\x12\x18\n\x10maxturntimes_xxz\x18\x06 \x01(\r\"\xc4\x07\n\x0ft_MainUserProto\x12\x12\n\ncharid_xxz\x18\x01 \x01(\r\x12\x10\n\x08name_xxz\x18\x02 \x01(\t\x12\x0f\n\x07sex_xxz\x18\x03 \x01(\r\x12\x11\n\tlevel_xxz\x18\x04 \x01(\r\x12\x0f\n\x07\x65xp_xxz\x18\x05 \x01(\x04\x12\x13\n\x0bnextexp_xxz\x18\x06 \x01(\x04\x12\x11\n\tgroup_xxz\x18\x07 \x01(\r\x12\x17\n\x0fspiritstone_xxz\x18\x08 \x01(\r\x12\x16\n\x0ereputation_xxz\x18\t \x01(\r\x12\x15\n\rbodylevel_xxz\x18\n \x01(\r\x12\x15\n\rdoomlevel_xxz\x18\x0b \x01(\r\x12\x14\n\x0clivetime_xxz\x18\x0c \x01(\r\x12\x13\n\x0bpkscore_xxz\x18\r \x01(\r\x12\x17\n\x0f\x64oompercent_xxz\x18\x0e \x01(\r\x12\x15\n\rspiritnum_xxz\x18\x0f \x01(\r\x12\x18\n\x10maxspiritnum_xxz\x18\x10 \x01(\r\x12\x17\n\x0fspiritlevel_xxz\x18\x11 \x01(\r\x12\x1b\n\x13goldspiritlevel_xxz\x18\x12 \x01(\r\x12\x1b\n\x13woodspiritlevel_xxz\x18\x13 \x01(\r\x12\x1c\n\x14waterspiritlevel_xxz\x18\x14 \x01(\r\x12\x1b\n\x13\x66irespiritlevel_xxz\x18\x15 \x01(\r\x12\x1a\n\x12mudspiritlevel_xxz\x18\x16 \x01(\r\x12\x10\n\x08\x66ood_xxz\x18\x17 \x01(\r\x12\x10\n\x08wood_xxz\x18\x18 \x01(\r\x12\x10\n\x08\x64rug_xxz\x18\x19 \x01(\r\x12\x10\n\x08iron_xxz\x18\x1a \x01(\r\x12\x18\n\x10skillpoint32_xxz\x18\x1b \x01(\r\x12\x14\n\x0cpositive_xxz\x18\x1c \x01(\r\x12\x14\n\x0cnegative_xxz\x18\x1d \x01(\r\x12\x13\n\x0bneutral_xxz\x18\x1e \x01(\r\x12\x1b\n\x13\x62uyskillpoint32_xxz\x18\x1f \x01(\r\x12\x10\n\x08gold_xxz\x18  \x01(\r\x12\x12\n\ngongde_xxz\x18! \x01(\r\x12\x1f\n\x17needskillcontribute_xxz\x18\" \x01(\r\x12\x1a\n\x12\x66\x61irylandmapid_xxz\x18# \x01(\r\x12\x18\n\x10officerlevel_xxz\x18$ \x01(\r\x12\x14\n\x0cuserface_xxz\x18% \x01(\r\x12\x15\n\rwalkspeed_xxz\x18& \x01(\r\x12\x14\n\x0c\x66lyspeed_xxz\x18\' \x01(\r\x12\x15\n\rswimspeed_xxz\x18( \x01(\r\x12\x19\n\x11totalrecharge_xxz\x18) \x01(\r\"@\n\x17t_UserItemMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"@\n\x16t_SellObjMessage_XBXXZ\x12\x15\n\robjthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\"T\n\x19t_RefreshObjMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\x12\x0f\n\x07num_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"-\n\x15t_DelObjMessage_XBXXZ\x12\x14\n\x0cqwthisid_xxz\x18\x01 \x01(\r\"S\n\x15t_BuyObjMessage_XBXXZ\x12\x11\n\tindex_xxz\x18\x01 \x01(\r\x12\x12\n\nitemid_xxz\x18\x02 \x01(\r\x12\x13\n\x0bitemnum_xxz\x18\x03 \x01(\r\"/\n\x1at_ReqOpenShopMessage_XBXXZ\x12\x11\n\tindex_xxz\x18\x01 \x01(\r\"f\n\x0ft_ShopItemProto\x12\x12\n\nitemid_xxz\x18\x01 \x01(\r\x12\x15\n\rmaxbuynum_xxz\x18\x02 \x01(\r\x12\x15\n\rcurbuynum_xxz\x18\x03 \x01(\r\x12\x11\n\tprice_xxz\x18\x04 \x01(\r\"p\n\x17t_ShopInfoMessage_XBXXZ\x12)\n\tshops_xxz\x18\x01 \x03(\x0b\x32\x16.xbxxz.t_ShopItemProto\x12\x17\n\x0frefreshtime_xxz\x18\x02 \x01(\r\x12\x11\n\tindex_xxz\x18\x03 \x01(\r\"+\n\x17t_UpLinGenMessage_XBXXZ\x12\x10\n\x08type_xxz\x18\x01 \x01(\r\"\xfc\x01\n\'t_stMobileChannelChatMessage_XBXXZProto\x12\x12\n\ndwType_xxz\x18\x01 \x01(\r\x12\x19\n\x11\x64wSysInfoType_xxz\x18\x02 \x01(\r\x12\x16\n\x0e\x64wCharType_xxz\x18\x03 \x01(\r\x12\x15\n\rdwCountry_xxz\x18\x04 \x01(\r\x12\x11\n\tdwVip_xxz\x18\x05 \x01(\r\x12\x1c\n\x14\x64wFromUserTempID_xxz\x18\x06 \x01(\r\x12\x16\n\x0e\x64wChatTime_xxz\x18\x07 \x01(\r\x12\x14\n\x0cpstrName_xxz\x18\x08 \x01(\t\x12\x14\n\x0cpstrChat_xxz\x18\t \x01(\t\"S\n\x12t_SchoolSkillProto\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\x12\x16\n\x0eskilllevel_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"`\n\x19t_SchoolInfoMessage_XBXXZ\x12\x14\n\x0cschoolid_xxz\x18\x01 \x01(\r\x12-\n\nskills_xxz\x18\x02 \x03(\x0b\x32\x19.xbxxz.t_SchoolSkillProto\"-\n\x16t_UpSkillMessage_XBXXZ\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\"]\n\x1ct_ReturnUpSkillMessage_XBXXZ\x12\x13\n\x0bskillid_xxz\x18\x01 \x01(\r\x12\x16\n\x0eskilllevel_xxz\x18\x02 \x01(\r\x12\x10\n\x08type_xxz\x18\x03 \x01(\r\"A\n\x19t_ReqAutoMapMessage_XBXXZ\x12\x11\n\tmapid_xxz\x18\x01 \x01(\r\x12\x11\n\tcount_xxz\x18\x02 \x01(\r\"-\n\x19t_ReqFiveSecMessage_XBXXZ\x12\x10\n\x08type_xxz\x18\x01 \x01(\rb\x06proto3')
 )
+
+
+
 
 _T_ENTERMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_EnterMapMessage_XBXXZ',
@@ -52,6 +54,7 @@ _T_ENTERMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=65,
 )
 
+
 _T_LOGINSELECTMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_LoginSelectMessage_XBXXZ',
     full_name='xbxxz.t_LoginSelectMessage_XBXXZ',
@@ -81,6 +84,7 @@ _T_LOGINSELECTMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=67,
     serialized_end=121,
 )
+
 
 _T_STGETRANDNAMEMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_stGetRandNameMessage_XBXXZ',
@@ -112,6 +116,7 @@ _T_STGETRANDNAMEMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=170,
 )
 
+
 _STSERVERRETURNLOGINFAILEDCMD = _descriptor.Descriptor(
     name='stServerReturnLoginFailedCmd',
     full_name='xbxxz.stServerReturnLoginFailedCmd',
@@ -141,6 +146,7 @@ _STSERVERRETURNLOGINFAILEDCMD = _descriptor.Descriptor(
     serialized_start=172,
     serialized_end=222,
 )
+
 
 _T_SPIRITNUMMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_SpiritNumMessage_XBXXZ',
@@ -179,6 +185,7 @@ _T_SPIRITNUMMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=296,
 )
 
+
 _T_ADDEXPMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_AddExpMessage_XBXXZ',
     full_name='xbxxz.t_AddExpMessage_XBXXZ',
@@ -216,6 +223,7 @@ _T_ADDEXPMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=362,
 )
 
+
 _T_MAINPACKNUMPROTO = _descriptor.Descriptor(
     name='t_MainPackNumProto',
     full_name='xbxxz.t_MainPackNumProto',
@@ -252,6 +260,7 @@ _T_MAINPACKNUMPROTO = _descriptor.Descriptor(
     serialized_start=364,
     serialized_end=431,
 )
+
 
 _T_CAVEVALUE5SECMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_CaveValue5SecMessage_XBXXZ',
@@ -346,6 +355,7 @@ _T_CAVEVALUE5SECMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=661,
 )
 
+
 _T_MAPUSERSCULPTPROTO = _descriptor.Descriptor(
     name='t_MapUserSculptProto',
     full_name='xbxxz.t_MapUserSculptProto',
@@ -417,6 +427,7 @@ _T_MAPUSERSCULPTPROTO = _descriptor.Descriptor(
     serialized_start=664,
     serialized_end=817,
 )
+
 
 _SELECTUSERINFO = _descriptor.Descriptor(
     name='SelectUserInfo',
@@ -581,6 +592,7 @@ _SELECTUSERINFO = _descriptor.Descriptor(
     serialized_end=1205,
 )
 
+
 _STOBJECTLOCATIONPROTO = _descriptor.Descriptor(
     name='stObjectLocationProto',
     full_name='xbxxz.stObjectLocationProto',
@@ -617,6 +629,7 @@ _STOBJECTLOCATIONPROTO = _descriptor.Descriptor(
     serialized_start=1207,
     serialized_end=1269,
 )
+
 
 _T_OBJECTPROTO = _descriptor.Descriptor(
     name='t_ObjectProto',
@@ -767,6 +780,7 @@ _T_OBJECTPROTO = _descriptor.Descriptor(
     serialized_end=1682,
 )
 
+
 _T_ADDOBJECTINFOPROTO = _descriptor.Descriptor(
     name='t_AddObjectInfoProto',
     full_name='xbxxz.t_AddObjectInfoProto',
@@ -803,6 +817,7 @@ _T_ADDOBJECTINFOPROTO = _descriptor.Descriptor(
     serialized_start=1684,
     serialized_end=1771,
 )
+
 
 _T_STADDOBJECTLISTUNITYMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     name='t_stAddObjectListUnityMessage_XBXXZProto',
@@ -841,6 +856,7 @@ _T_STADDOBJECTLISTUNITYMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     serialized_end=1886,
 )
 
+
 _T_STUSERINFOMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     name='t_stUserInfoMessage_XBXXZProto',
     full_name='xbxxz.t_stUserInfoMessage_XBXXZProto',
@@ -877,6 +893,7 @@ _T_STUSERINFOMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     serialized_start=1888,
     serialized_end=1977,
 )
+
 
 _PETPKACTIONPROTO = _descriptor.Descriptor(
     name='PetPKActionProto',
@@ -921,6 +938,7 @@ _PETPKACTIONPROTO = _descriptor.Descriptor(
     serialized_start=1979,
     serialized_end=2057,
 )
+
 
 _PKACTIONPROTO = _descriptor.Descriptor(
     name='PKActionProto',
@@ -1001,6 +1019,7 @@ _PKACTIONPROTO = _descriptor.Descriptor(
     serialized_end=2286,
 )
 
+
 _T_REWARDOBJSPROTO = _descriptor.Descriptor(
     name='t_RewardObjsProto',
     full_name='xbxxz.t_RewardObjsProto',
@@ -1037,6 +1056,7 @@ _T_REWARDOBJSPROTO = _descriptor.Descriptor(
     serialized_start=2288,
     serialized_end=2340,
 )
+
 
 _T_NPCATTRESULTMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_NpcAttResultMessage_XBXXZ',
@@ -1089,6 +1109,7 @@ _T_NPCATTRESULTMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=2504,
 )
 
+
 _T_MOVEMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_MoveMapMessage_XBXXZ',
     full_name='xbxxz.t_MoveMapMessage_XBXXZ',
@@ -1118,6 +1139,7 @@ _T_MOVEMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=2506,
     serialized_end=2547,
 )
+
 
 _T_MAPLISTMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_MapListMessage_XBXXZ',
@@ -1155,6 +1177,7 @@ _T_MAPLISTMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=2549,
     serialized_end=2615,
 )
+
 
 _T_EVENTINFOPROTO = _descriptor.Descriptor(
     name='t_EventInfoProto',
@@ -1221,6 +1244,7 @@ _T_EVENTINFOPROTO = _descriptor.Descriptor(
     serialized_end=2751,
 )
 
+
 _T_ONEMAPINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_OneMapInfoMessage_XBXXZ',
     full_name='xbxxz.t_OneMapInfoMessage_XBXXZ',
@@ -1264,6 +1288,7 @@ _T_ONEMAPINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=2753,
     serialized_end=2866,
 )
+
 
 _T_MAPENTERINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_MapEnterInfoMessage_XBXXZ',
@@ -1329,6 +1354,7 @@ _T_MAPENTERINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=2869,
     serialized_end=3060,
 )
+
 
 _T_MAINUSERPROTO = _descriptor.Descriptor(
     name='t_MainUserProto',
@@ -1640,6 +1666,7 @@ _T_MAINUSERPROTO = _descriptor.Descriptor(
     serialized_end=4027,
 )
 
+
 _T_USERITEMMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_UserItemMessage_XBXXZ',
     full_name='xbxxz.t_UserItemMessage_XBXXZ',
@@ -1677,6 +1704,7 @@ _T_USERITEMMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=4093,
 )
 
+
 _T_SELLOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_SellObjMessage_XBXXZ',
     full_name='xbxxz.t_SellObjMessage_XBXXZ',
@@ -1713,6 +1741,7 @@ _T_SELLOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=4095,
     serialized_end=4159,
 )
+
 
 _T_REFRESHOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_RefreshObjMessage_XBXXZ',
@@ -1758,6 +1787,7 @@ _T_REFRESHOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=4245,
 )
 
+
 _T_DELOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_DelObjMessage_XBXXZ',
     full_name='xbxxz.t_DelObjMessage_XBXXZ',
@@ -1787,6 +1817,7 @@ _T_DELOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=4247,
     serialized_end=4292,
 )
+
 
 _T_BUYOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_BuyObjMessage_XBXXZ',
@@ -1832,6 +1863,7 @@ _T_BUYOBJMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=4377,
 )
 
+
 _T_REQOPENSHOPMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_ReqOpenShopMessage_XBXXZ',
     full_name='xbxxz.t_ReqOpenShopMessage_XBXXZ',
@@ -1861,6 +1893,7 @@ _T_REQOPENSHOPMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=4379,
     serialized_end=4426,
 )
+
 
 _T_SHOPITEMPROTO = _descriptor.Descriptor(
     name='t_ShopItemProto',
@@ -1913,6 +1946,7 @@ _T_SHOPITEMPROTO = _descriptor.Descriptor(
     serialized_end=4530,
 )
 
+
 _T_SHOPINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_ShopInfoMessage_XBXXZ',
     full_name='xbxxz.t_ShopInfoMessage_XBXXZ',
@@ -1957,6 +1991,7 @@ _T_SHOPINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=4644,
 )
 
+
 _T_UPLINGENMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_UpLinGenMessage_XBXXZ',
     full_name='xbxxz.t_UpLinGenMessage_XBXXZ',
@@ -1986,6 +2021,7 @@ _T_UPLINGENMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=4646,
     serialized_end=4689,
 )
+
 
 _T_STMOBILECHANNELCHATMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     name='t_stMobileChannelChatMessage_XBXXZProto',
@@ -2073,6 +2109,7 @@ _T_STMOBILECHANNELCHATMESSAGE_XBXXZPROTO = _descriptor.Descriptor(
     serialized_end=4944,
 )
 
+
 _T_SCHOOLSKILLPROTO = _descriptor.Descriptor(
     name='t_SchoolSkillProto',
     full_name='xbxxz.t_SchoolSkillProto',
@@ -2117,6 +2154,7 @@ _T_SCHOOLSKILLPROTO = _descriptor.Descriptor(
     serialized_end=5029,
 )
 
+
 _T_SCHOOLINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_SchoolInfoMessage_XBXXZ',
     full_name='xbxxz.t_SchoolInfoMessage_XBXXZ',
@@ -2154,6 +2192,7 @@ _T_SCHOOLINFOMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=5127,
 )
 
+
 _T_UPSKILLMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_UpSkillMessage_XBXXZ',
     full_name='xbxxz.t_UpSkillMessage_XBXXZ',
@@ -2183,6 +2222,7 @@ _T_UPSKILLMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_start=5129,
     serialized_end=5174,
 )
+
 
 _T_RETURNUPSKILLMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_ReturnUpSkillMessage_XBXXZ',
@@ -2228,6 +2268,7 @@ _T_RETURNUPSKILLMESSAGE_XBXXZ = _descriptor.Descriptor(
     serialized_end=5269,
 )
 
+
 _T_REQAUTOMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     name='t_ReqAutoMapMessage_XBXXZ',
     full_name='xbxxz.t_ReqAutoMapMessage_XBXXZ',
@@ -2263,6 +2304,36 @@ _T_REQAUTOMAPMESSAGE_XBXXZ = _descriptor.Descriptor(
     ],
     serialized_start=5271,
     serialized_end=5336,
+)
+
+_T_REQFIVESECMESSAGE_XBXXZ = _descriptor.Descriptor(
+    name='t_ReqFiveSecMessage_XBXXZ',
+    full_name='xbxxz.t_ReqFiveSecMessage_XBXXZ',
+    filename=None,
+    file=DESCRIPTOR,
+    containing_type=None,
+    fields=[
+        _descriptor.FieldDescriptor(
+            name='type_xxz', full_name='xbxxz.t_ReqFiveSecMessage_XBXXZ.type_xxz', index=0,
+            number=1, type=13, cpp_type=3, label=1,
+            has_default_value=False, default_value=0,
+            message_type=None, enum_type=None, containing_type=None,
+            is_extension=False, extension_scope=None,
+            serialized_options=None, file=DESCRIPTOR),
+    ],
+    extensions=[
+    ],
+    nested_types=[],
+    enum_types=[
+    ],
+    serialized_options=None,
+    is_extendable=False,
+    syntax='proto3',
+    extension_ranges=[],
+    oneofs=[
+    ],
+    serialized_start=5338,
+    serialized_end=5383,
 )
 
 _SELECTUSERINFO.fields_by_name['sculpt'].message_type = _T_MAPUSERSCULPTPROTO
@@ -2316,6 +2387,7 @@ DESCRIPTOR.message_types_by_name['t_SchoolInfoMessage_XBXXZ'] = _T_SCHOOLINFOMES
 DESCRIPTOR.message_types_by_name['t_UpSkillMessage_XBXXZ'] = _T_UPSKILLMESSAGE_XBXXZ
 DESCRIPTOR.message_types_by_name['t_ReturnUpSkillMessage_XBXXZ'] = _T_RETURNUPSKILLMESSAGE_XBXXZ
 DESCRIPTOR.message_types_by_name['t_ReqAutoMapMessage_XBXXZ'] = _T_REQAUTOMAPMESSAGE_XBXXZ
+DESCRIPTOR.message_types_by_name['t_ReqFiveSecMessage_XBXXZ'] = _T_REQFIVESECMESSAGE_XBXXZ
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 t_EnterMapMessage_XBXXZ = _reflection.GeneratedProtocolMessageType('t_EnterMapMessage_XBXXZ', (_message.Message,), dict(
@@ -2597,5 +2669,13 @@ t_ReqAutoMapMessage_XBXXZ = _reflection.GeneratedProtocolMessageType('t_ReqAutoM
     # @@protoc_insertion_point(class_scope:xbxxz.t_ReqAutoMapMessage_XBXXZ)
 ))
 _sym_db.RegisterMessage(t_ReqAutoMapMessage_XBXXZ)
+
+t_ReqFiveSecMessage_XBXXZ = _reflection.GeneratedProtocolMessageType('t_ReqFiveSecMessage_XBXXZ', (_message.Message,), dict(
+    DESCRIPTOR=_T_REQFIVESECMESSAGE_XBXXZ,
+    __module__='data_pb2'
+    # @@protoc_insertion_point(class_scope:xbxxz.t_ReqFiveSecMessage_XBXXZ)
+))
+_sym_db.RegisterMessage(t_ReqFiveSecMessage_XBXXZ)
+
 
 # @@protoc_insertion_point(module_scope)

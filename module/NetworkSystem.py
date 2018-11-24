@@ -37,6 +37,8 @@ class NetworkSystem:
 
     def send(self, data):
         # print('SEND', data)
+        if not self.client:
+            return
         self.client.send(wrap_data(data))
 
     def write(self, msg_id, proto_data):
@@ -121,10 +123,13 @@ class NetworkSystem:
                         ret_code = stServerReturnLoginFailedCmd.FromString(ret.data).returncode
                         print('Return Login Failed: Code', ret_code)
                         if ret_code == 6:
-                            stop_thread(self.thread_recv)
-                            time.sleep(30)
+                            self.client = None
+                            time.sleep(60)
+                            self.mHeader = 0
+                            self.mTargetLength = 4
+                            self.mMessage = b''
+                            self.mMessageQueue.empty()
                             self.login_server()
-                            self.create_reader()
 
                     elif ret.messageid in self.msg_list.keys():
                         for func in self.msg_list[ret.messageid]:

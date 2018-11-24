@@ -30,6 +30,7 @@ class SchoolSystem:
     def get_scalable_skills(self, spirit_num):
         level_exp = [100, 5000, 25000, 125000, 625000, 2600000, 7800000, 16000000, 33000000]
         ret = []
+
         for i in self.school.skills_xxz:
             magic = magic_base.get(i.skillid_xxz)
             if int(magic['LevelLimit_XBXXZ']) <= i.skilllevel_xxz:
@@ -37,7 +38,6 @@ class SchoolSystem:
             if level_exp[i.skilllevel_xxz - 1] > spirit_num:
                 continue
             ret.append(i)
-        # print('Got %d Scalable Skills' % len(ret))
         return ret
 
     def get_most_skill(self, skills):

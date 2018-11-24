@@ -6,4 +6,3 @@ from .LingGenBase import LingGen, linggen_base
 from .MapXXZ import *
 from .TerrainCellType import TerrainCellType_XBXXZ
 from .MagicBase import MagicBase, magic_base
-from .data_pb2 import *

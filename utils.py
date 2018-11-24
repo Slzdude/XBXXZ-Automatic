@@ -26,3 +26,4 @@ def stop_thread(thread):
 
 def wrap_data(data):
     return struct.pack('<i', len(data)) + data
+

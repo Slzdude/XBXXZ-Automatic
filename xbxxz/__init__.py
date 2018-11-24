@@ -7,5 +7,5 @@ from .stSendUnityMessage_XBXXZ import *
 from .stServerReturnLoginSuccessCmd import *
 from .stUserRequestLoginCmd import *
 from .stUserVerifyVerCmd import *
-from .data_pb2 import *
 from .stClientUnityMessage_XBXXZ import *
+from .data_pb2 import *

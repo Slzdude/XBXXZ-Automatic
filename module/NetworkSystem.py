@@ -73,7 +73,7 @@ class NetworkSystem:
         while True:
             if not self.client or self.client._closed:
                 print('Waitting For Connection...')
-                time.sleep(0.5)
+                time.sleep(5)
                 continue
             try:
                 self.read()

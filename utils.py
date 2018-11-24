@@ -3,6 +3,8 @@
 import ctypes
 import inspect
 import struct
+import os
+import sys
 
 
 def _async_raise(tid, exctype):
@@ -27,3 +29,7 @@ def stop_thread(thread):
 def wrap_data(data):
     return struct.pack('<i', len(data)) + data
 
+
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)

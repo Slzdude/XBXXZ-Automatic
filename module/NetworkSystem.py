@@ -7,7 +7,7 @@ from queue import Queue
 
 from data import XBXXZ_BACK_MESSAGE, FRONT_XBXXZ
 from module import MapSystem, ItemSystem
-from utils import stop_thread, wrap_data
+from utils import wrap_data, restart_program
 from xbxxz import *
 
 
@@ -125,11 +125,7 @@ class NetworkSystem:
                         if ret_code == 6:
                             self.client = None
                             time.sleep(60)
-                            self.mHeader = 0
-                            self.mTargetLength = 4
-                            self.mMessage = b''
-                            self.mMessageQueue.empty()
-                            self.login_server()
+                            restart_program()
 
                     elif ret.messageid in self.msg_list.keys():
                         for func in self.msg_list[ret.messageid]:
@@ -153,14 +149,6 @@ class NetworkSystem:
         self.thread_msg = threading.Thread(target=self.handle_msg)
         self.thread_msg.setDaemon(True)
         self.thread_msg.start()
-
-    def stop_thread(self):
-        if self.thread_recv is None:
-            return
-        stop_thread(self.thread_recv)
-        if self.thread_msg is None:
-            return
-        stop_thread(self.thread_msg)
 
     def login_server(self):
         self.client = socket.socket()

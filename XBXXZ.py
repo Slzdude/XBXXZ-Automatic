@@ -6,7 +6,7 @@ import time
 
 from google.protobuf import json_format
 
-from data import map3_xxz, MapXXZ, map5_xxz, magic_base, map7_xxz, map6_xxz, map2001_xxz
+from data import map5_xxz, map7_xxz, MapXXZ
 from data.BackMessage import XBXXZ_BACK_MESSAGE
 from data.FrontMessage import FRONT_XBXXZ
 from module import NetworkSystem, MapSystem, ItemSystem, UserSystem, SchoolSystem
@@ -137,6 +137,20 @@ def back_upskill(data):
     school_sys.on_upgrade_skill(tmp)
 
 
+@net_sys.bind(XBXXZ_BACK_MESSAGE.XBXXZ_BACK_FUNCTION_AUTOMAPONLINEEND)
+def normal_stop(data):
+    print('Auto map finished')
+    map_sys.is_automap = False
+
+
+@net_sys.bind(XBXXZ_BACK_MESSAGE.XBXXZ_BACK_FUNCTION_AUTOMAPRESULT)
+def auto_result(data):
+    tmp = t_AutoMapResultMessage_XBXXZ.FromString(data)
+    if not map_sys.is_special(tmp.mapid_xxz):
+        map_sys.auto_map = tmp
+        map_sys.is_automap = True
+
+
 def spirit_monit():
     while True:
         if user_sys.user:
@@ -149,7 +163,7 @@ def spirit_monit():
                 if skill_id:
                     school_sys.upgrade_skill(skill_id)
             # socket.send_id(FRONT_XBXXZ.XBXXZ_FRONT_FUNCTION_JULINUPLEVEL)
-        time.sleep(5)
+        time.sleep(30)
 
 
 net_sys.login_server()
@@ -183,10 +197,11 @@ def travel():
             cur_pos = map_sys.map.cur_pos
             map_sys.map.show()
             cmd = input()
+            if cmd[0].upper() == 'C':
+                break
             if cmd[0].upper() == 'Q' and map_sys.map.is_exit():
                 # print('EXIT_MAP')
                 map_sys.exit()
-                break
             _step = 1
             if len(cmd) > 1 and cmd[1].isdigit():
                 _step = int(cmd[1])
@@ -202,6 +217,14 @@ def travel():
                 map_sys.move_to(cur_pos)
                 if map_sys.map.is_enemy():
                     map_sys.attack()
+                    i = 0
+                    while map_sys.wait and i < 20:
+                        time.sleep(0.5)
+                        i += 1
+                        map_sys.wait = False
+                if map_sys.map.is_entry():
+                    map_sys.map_info = False
+                time.sleep(0.5)
 
         else:
             if not map_sys.move():
@@ -215,11 +238,52 @@ def travel():
             # map_sys.map.show()
 
 
+def auto_map():
+    time.sleep(5)
+    print('Automap Begin')
+    while True:
+        if not net_sys.client:
+            print('Waiting for connection')
+            time.sleep(10)
+        if not map_sys.auto_map:
+            print('Waiting for auto map message')
+            time.sleep(1)
+            continue
+        if net_sys.enter_info.maxturntimes_xxz and net_sys.enter_info.totalentertimes_xxz > net_sys.enter_info.maxturntimes_xxz:
+            print('暂停过图')
+            break
+        item_sys.handle_all_items()
+        auto_map_id = 1026
+        if net_sys.enter_info.maxturntimes_xxz:
+            if net_sys.enter_info.totalentertimes_xxz <= net_sys.enter_info.maxturntimes_xxz / 2:
+                auto_map_id = 1026
+            else:
+                auto_map_id = 1007
+        count = min(net_sys.enter_info.maxautotimes_xxz, int(net_sys.enter_info.maxturntimes_xxz - net_sys.enter_info.totalentertimes_xxz))
+        if not count:
+            break
+
+        interval = map_sys.auto_map.internaltime_xxz
+        if map_sys.auto_map.subhalfsecflag_xxz == 1:
+            interval = interval - 0.5
+
+        endtime = map_sys.auto_map.starttime_xxz + map_sys.auto_map.endtime_xxz * interval
+        if not map_sys.is_automap or int(time.time()) >= endtime:
+            print('Start map %d %d' % (auto_map_id, count))
+            net_sys.write(FRONT_XBXXZ.XBXXZ_FRONT_FUNCTION_AUTOMAP, t_ReqAutoMapMessage_XBXXZ(mapid_xxz=auto_map_id, count_xxz=count))
+        print('In map %d, running %d/%d, from %s to %s' % (
+            map_sys.auto_map.mapid_xxz, map_sys.auto_map.curcount_xxz, map_sys.auto_map.totalcount_xxz, time.strftime("%H:%M:%S", time.localtime(map_sys.auto_map.starttime_xxz)),
+            time.strftime("%H:%M:%S", time.localtime(endtime))))
+        time.sleep(5)
+    print('Finished')
+
+
 spirit_monit_thread = threading.Thread(target=spirit_monit)
 spirit_monit_thread.setDaemon(True)
 spirit_monit_thread.start()
 
-travel()
+auto_map()
+# travel()
 # time.sleep(3)
 
 while True:

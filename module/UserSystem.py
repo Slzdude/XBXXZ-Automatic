@@ -1,7 +1,8 @@
 # coding:utf-8
 import time
 
-from data import linggen_base, FRONT_XBXXZ
+from DataMapping.LingGenBase import linggen_base
+from data import FRONT_XBXXZ
 from xbxxz import *
 
 

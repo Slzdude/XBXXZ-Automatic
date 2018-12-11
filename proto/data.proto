@@ -313,3 +313,33 @@ message t_ReqAutoMapMessage_XBXXZ {
 message t_ReqFiveSecMessage_XBXXZ {
     uint32 type_xxz = 1;
 }
+
+message t_AutoMapRecordProto {
+    uint32 mapid_xxz = 1;
+    uint32 lefttimes_xxz = 2;
+    uint32 totaltimes_xxz = 3;
+}
+
+message t_AllAutoMapMessage_XBXXZ {
+    repeated t_AutoMapRecordProto records_xxz = 1;
+}
+
+message t_OneStepAutoMapProto {
+    uint32 count_xxz = 1;
+    uint32 type_xxz = 2;
+    uint32 value1_xxz = 3;
+    uint32 value2_xxz = 4;
+    repeated t_RewardObjsProto items_xxz = 5;
+    uint32 reputation_xxz = 6;
+}
+
+message t_AutoMapResultMessage_XBXXZ {
+    uint32 totalcount_xxz = 1;
+    uint32 curcount_xxz = 2;
+    uint32 starttime_xxz = 3;
+    repeated t_OneStepAutoMapProto allsteps_xxz = 4;
+    uint32 internaltime_xxz = 5;
+    uint32 endtime_xxz = 6;
+    uint32 mapid_xxz = 7;
+    uint32 subhalfsecflag_xxz = 8;
+}

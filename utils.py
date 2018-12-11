@@ -22,6 +22,13 @@ def _async_raise(tid, exctype):
         raise SystemError("PyThreadState_SetAsyncExc failed")
 
 
+def real_length(s: str):
+    length = len(s)
+    utf8_length = len(s.encode('utf-8'))
+    length = (utf8_length - length) / 2 + length
+    return int(length)
+
+
 def stop_thread(thread):
     _async_raise(thread.ident, SystemExit)
 

@@ -1,6 +1,7 @@
 # coding:utf-8
 from threading import RLock
-from data import FRONT_XBXXZ, magic_base
+from data import FRONT_XBXXZ
+from DataMapping.MagicBase import magic_base
 from xbxxz import *
 
 
@@ -30,22 +31,26 @@ class SchoolSystem:
     def get_scalable_skills(self, spirit_num):
         level_exp = [100, 5000, 25000, 125000, 625000, 2600000, 7800000, 16000000, 33000000]
         ret = []
-
+        xinfa = []
         for i in self.school.skills_xxz:
             magic = magic_base.get(i.skillid_xxz)
             if int(magic['LevelLimit_XBXXZ']) <= i.skilllevel_xxz:
                 continue
             if level_exp[i.skilllevel_xxz - 1] > spirit_num:
                 continue
+            if int(magic['UpType_XBXXZ']) == 5:
+                xinfa.append(i)
             ret.append(i)
-        return ret
+        if len(xinfa):
+            return xinfa
+        else:
+            return ret
 
     def get_most_skill(self, skills):
         ret = {}
         if not skills:
             return
         for i in skills:
-            assert isinstance(i, t_SchoolSkillProto)
             magic = magic_base.get(i.skillid_xxz)
             rate = int(magic['Level_XBXXZ'])
             ret[i.skillid_xxz] = rate

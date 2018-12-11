@@ -1,6 +1,7 @@
-from enum import Enum
+from enum import Enum, unique
 
 
+@unique
 class TerrainCellType_XBXXZ(Enum):
     NAN = 0
     Entry = 1

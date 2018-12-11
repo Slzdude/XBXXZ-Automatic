@@ -1,7 +1,8 @@
 # coding:utf-8
 from threading import RLock
 from google.protobuf import json_format
-from data import FRONT_XBXXZ, item_base
+from data import FRONT_XBXXZ
+from DataMapping.ItemBase import item_base
 from xbxxz import *
 
 
@@ -17,10 +18,14 @@ class ItemSystem:
         if obj.pos_xxz.dwLocation_xxz == 2:
             # print('EQUIP', obj.strName_xxz)
             return
-        item_type = int(item['Type_XBXXZ'])
-
+        if not item:
+            return
         if obj.dwObjectID_xxz in []:
             return
+        item_type = int(item['Type_XBXXZ'])
+
+        if '信物' in item['Name_XBXXZ']:
+            self.sell_item(obj)
 
         if item_type in [11, 12, 13]:
             self.sell_item(obj)

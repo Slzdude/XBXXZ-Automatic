@@ -1,5 +1,5 @@
 # coding:utf-8
-from data.Database import Database
+from DataMapping.Database import Database
 
 
 class MagicBase(Database):

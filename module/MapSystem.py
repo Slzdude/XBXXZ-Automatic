@@ -3,7 +3,7 @@ import json
 import time
 
 from data import FRONT_XBXXZ, MapXXZ
-from xbxxz import t_EnterMapMessage_XBXXZ, t_MoveMapMessage_XBXXZ
+from xbxxz import t_EnterMapMessage_XBXXZ, t_MoveMapMessage_XBXXZ, t_AutoMapResultMessage_XBXXZ
 
 
 class MapSystem:
@@ -14,6 +14,9 @@ class MapSystem:
         self.wait = False
         self.map_info = False
         self.in_map = False
+        self.auto_map = t_AutoMapResultMessage_XBXXZ()
+        self.is_automap = False
+        self.auto_map_id = 0
 
     def init_map(self, data):
         self.map.init_map(data)
@@ -21,6 +24,10 @@ class MapSystem:
         self.wait = False
         if self.is_enemy():
             self.attack()
+
+    @staticmethod
+    def is_special(mapID):
+        return mapID in [2003, 2004, 2005, 2007, 2008, 2009, 2010]
 
     def move(self):
         next_step = self.map.get_step()

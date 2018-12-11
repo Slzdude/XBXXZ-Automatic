@@ -4,6 +4,8 @@ import time
 from queue import Queue
 import json
 from data.TerrainCellType import TerrainCellType_XBXXZ
+from utils import real_length
+from DataMapping.NpcBase import npc_base
 
 
 class MapXXZ:
@@ -20,7 +22,8 @@ class MapXXZ:
     def init_map(self, map_data):
         # open('map/%d.json' % self.map_id, 'w').write(json.dumps(map_data))
         self.events = map_data['eventsXxz']
-        self.cur_pos = map_data['curposXxz']
+        if 'curposXxz' in map_data:
+            self.cur_pos = map_data['curposXxz']
         print(self.cur_pos)
         self.step_index = 0
         self.last_pos = map_data['lastposXxz']
@@ -48,7 +51,10 @@ class MapXXZ:
 
     def is_exit(self):  # 判断是否为出口
         # and self.step_index == len(self.steps) - 1
-        return TerrainCellType_XBXXZ(self.events[self.cur_pos - 1]['typeXxz']) == TerrainCellType_XBXXZ.NextMap
+        return int(self.events[self.cur_pos - 1]['typeXxz']) == 12
+
+    def is_entry(self):
+        return int(self.events[self.cur_pos - 1]['typeXxz']) == 1
 
     def is_enemy(self):  # 判断是否为可攻击目标
         return self.events[self.cur_pos - 1]['typeXxz'] in [5, 7, 13, 14, 15]
@@ -57,15 +63,18 @@ class MapXXZ:
         i = 1
         line = '|'
         for event in self.events:
-            evt_type = TerrainCellType_XBXXZ(event['typeXxz'])
-            if evt_type == TerrainCellType_XBXXZ.Empty:
+            evt_type = int(event['typeXxz'])
+            if evt_type == 2:
                 tmp = ' ' * 12
-            elif evt_type == TerrainCellType_XBXXZ.Block:
+            elif evt_type == 3:
                 tmp = 'X' * 12
-            elif evt_type == TerrainCellType_XBXXZ.Chest:
+            elif evt_type == 6:
                 tmp = '%-12s' % ('%dX%d' % (event['value1Xxz'], event['value2Xxz']))
+            elif evt_type in [5, 7, 13, 14, 15]:
+                npc = npc_base.get(event['value1Xxz'])
+                tmp = npc['name_XBXXZ'] + (12 - real_length(npc['name_XBXXZ'])) * ' '
             else:
-                tmp = '%-12s' % evt_type.name
+                tmp = '%-12s' % TerrainCellType_XBXXZ(evt_type).name
                 # line += '%02d' % evt_type
             if self.cur_pos == i:
                 tmp = '%-12s' % 'curpos'
